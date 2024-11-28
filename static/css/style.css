@@ -1,0 +1,183 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://images.wallpaperscraft.com/image/single/street_buildings_road_1310097_1280x720.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styles */
+.container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Styles */
+.card {
+    background: rgba(248, 249, 250, 0.9); /* Light background for the form with opacity */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    width: 80%;
+    max-width: 800px;
+    color: #2c3e50; /* Dark text for contrast */
+}
+
+.card-header {
+    background: linear-gradient(to right, #34495e, #2c3e50);
+    color: #f39c12; /* Golden accent */
+    font-size: 2rem;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #f39c12;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.card-body {
+    padding: 30px 20px;
+    text-align: center;
+    background: #f8f9fa; /* Maintain light grey background inside the form */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures all elements inside are centered */
+}
+
+/* Headings */
+h1 {
+    color: #f39c12; /* Golden text */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+h5 {
+    color: #34495e; /* Dark text for light background */
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures center alignment of form content */
+}
+
+label {
+    color: #34495e; /* Darker text for better readability */
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%; /* Aligns with form control */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%; /* Ensures uniform spacing */
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #bdc3c7;
+    color: #2c3e50; /* Dark text for inputs */
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%; /* Makes the input field span the form width */
+}
+
+.form-control:focus {
+    border-color: #f39c12;
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.8);
+    outline: none;
+}
+
+/* Dropdown Styling */
+.selectpicker {
+    appearance: none;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    color: #2c3e50; /* Match input text color */
+    width: 100%; /* Spans the form width */
+}
+
+.selectpicker:focus {
+    border-color: #f39c12;
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.8);
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background: #f39c12;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #e67e22;
+    box-shadow: 0 4px 10px rgba(243, 156, 18, 0.8);
+    transform: translateY(-2px);
+}
+
+/* Prediction Display */
+#prediction {
+    color: #f39c12;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer Text */
+footer {
+    text-align: center;
+    color: #bdc3c7;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .form-control, .selectpicker {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
