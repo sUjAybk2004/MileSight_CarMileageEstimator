@@ -31,53 +31,69 @@
                 </div>
                 <br>
                 <form method="post" action="#" accept-charset="utf-8">
-                        <div class="col-10 form-group" style="text-align: center">
-                            <label><b>Select No. Of Cylinders</b></label>
-                            <select class="selectpicker form-control" id="Cylinders" name="Cylinders" required="1">
-                                {% for Cylinders in Cylinders %}
-                                <option value="{{ Cylinders }}">{{ Cylinders }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col-10 form-group" style="text-align: center">
-                            <label><b>Select Fuel Type</b></label>
-                            <select class="selectpicker form-control" id="Fuel_Type" name="Fuel_Type" required="1">
-                                {% for Fuel_Type in Fuel_Type %}
-                                <option value="{{ Fuel_Type }}">{{ Fuel_Type }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col-10 form-group" style="text-align: center">
-                            <label><b>Select Road Type</b></label>
-                            <select class="selectpicker form-control" id="Road_Type" name="Road_Type" required="1">
-                                {% for Road_Type in Road_Type %}
-                                <option value="{{ Road_Type }}">{{ Road_Type }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col-10 form-group" style="text-align: center">
-                            <label><b>Select Age of the Car</b></label>
-                            <select class="selectpicker form-control" id="Age_years" name="Age_years" required="1">
-                                {% for Age_years in Age_years %}
-                                <option value="{{ Age_years }}">{{ Age_years }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col-10 form-group" style="text-align: center">
-                            <label><b>Enter the Weight of the Car in Kgs: </b></label>
-                            <input class="form-control" type = "text" id="Weight_kg" name="Weight_kg" placeholder="Enter the Weight(kgs)">
-                        </div>
-                        <div class="col-10 form-group" style="text-align: center">
-                            <label><b>Enter the Power of the Car in hp: </b></label>
-                            <input class="form-control" type = "text" id="Horsepower" name="Horsepower" placeholder="Enter the power(hp)">
-                        </div>
-                        <div class="col-10 form-group" style="text-align: center">
-                            <button class="btn btn-primary form-control" onclick="send_data()">
-                            Predict Mileage
-                            </button>
-                        </div>
+    <div class="col-10 form-group" style="text-align: center">
+        <label><b>Select No. Of Cylinders</b></label>
+        <select class="selectpicker form-control" id="Cylinders" name="Cylinders" required="1">
+            {% for Cylinders in Cylinders %}
+            <option value="{{ Cylinders }}">{{ Cylinders }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-10 form-group" style="text-align: center">
+        <label><b>Select Fuel Type</b></label>
+        <select class="selectpicker form-control" id="Fuel_Type" name="Fuel_Type" required="1">
+            {% for Fuel_Type in Fuel_Type %}
+            <option value="{{ Fuel_Type }}">{{ Fuel_Type }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-10 form-group" style="text-align: center">
+        <label><b>Select Road Type</b></label>
+        <select class="selectpicker form-control" id="Road_Type" name="Road_Type" required="1">
+            {% for Road_Type in Road_Type %}
+            <option value="{{ Road_Type }}">{{ Road_Type }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-10 form-group" style="text-align: center">
+        <label><b>Select Age of the Car</b></label>
+        <select class="selectpicker form-control" id="Age_years" name="Age_years" required="1">
+            {% for Age_years in Age_years %}
+            <option value="{{ Age_years }}">{{ Age_years }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-10 form-group" style="text-align: center">
+        <label><b>Enter the Weight of the Car in Kgs: </b></label>
+        <input class="form-control"
+               type="number"
+               id="Weight_kg"
+               name="Weight_kg"
+               placeholder="Enter the Weight(kgs)"
+               min="600"
+               max="2500"
+               step="0.01"
+               oninput="validateInput(this)"
+               required>
+    </div>
+    <div class="col-10 form-group" style="text-align: center">
+        <label><b>Enter the Power of the Car in hp: </b></label>
+        <input class="form-control"
+               type="number"
+               id="Horsepower"
+               name="Horsepower"
+               placeholder="Enter the power(hp)"
+               min="50"
+               max="250"
+               step="0.01"
+               oninput="validateInput(this)"
+               required>
+    </div>
+    <div class="col-10 form-group" style="text-align: center">
+        <button class="btn btn-primary form-control" onclick="send_data()">Predict Mileage</button>
+    </div>
+</form>
 
-                    </form>
                 <br>
                 <div class="row">
                     <div class="col-12" style="text-align: center">
