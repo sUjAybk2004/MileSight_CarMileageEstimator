@@ -5,12 +5,13 @@ import pandas as pd
 import pickle
 import numpy as np
 app = Flask(__name__)
+
 model = pickle.load(open('LinearRegression.pkl', 'rb'))
 car = pd.read_csv('train.csv')
 
 @app.route('/')
 def index():
-    # Weight_kg
+    # Weight_kgpi
     # Horsepower
     Cylinders = sorted(car['Cylinders'].unique())
     Fuel_Type = sorted(car['Fuel_Type'].unique())
@@ -33,4 +34,4 @@ def predict():
     # print(prediction)
     return str(np.round(prediction[0],2))
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=8000, debug=True)
